@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="DESKTOP-2DRAUS7" name="pytest" skipped="0" tests="2" time="205.257" timestamp="2020-09-19T14:58:12.796115"><testcase classname="TestCases.test_00_login.TestLogin" file="TestCases\test_00_login.py" line="68" name="test_login_2_normal" time="14.862"></testcase><testcase classname="TestCases.test_01_invest.TestInvest" file="TestCases\test_01_invest.py" line="50" name="test__invest_success" time="173.842"><failure message="TypeError: float() argument must be a string or a number, not &apos;NoneType&apos;">self = &lt;TestCases.test_01_invest.TestInvest testMethod=test__invest_success&gt;
+
+    @pytest.mark.smoke
+    def test__invest_success(self):
+        # 正常用例 前提条件
+        # 用户已登录
+        # 有能够投资的标
+        # 账号有余额可以投资
+        # 步骤
+        # 标页面---获取一下投资用户余额
+        userMoney_beforeInvest = self.bid_page.get_user_money()
+    
+        # 2. 标页面---输入投资金额，点击投资按钮
+        self.bid_page.invest(ID.invest_money_seccess[&quot;money&quot;])
+        # 3. 标页面---点击投资成功的弹出框--查看并激活
+        self.bid_page.click_activeButton_on_success_popup()
+        # 断言
+        # 个人页面----获取投资后金额
+        userMoney_afterInvest = UserPage(self.driver).get_user_leftMoney()
+        # 投资前金额-投资后金额  = 投资金额
+&gt;       assert ID.invest_money_seccess[&apos;money&apos;] == int(float(userMoney_beforeInvest)-float(userMoney_afterInvest))
+E       TypeError: float() argument must be a string or a number, not &apos;NoneType&apos;
+
+TestCases\test_01_invest.py:69: TypeError</failure></testcase></testsuite></testsuites>

@@ -8,13 +8,15 @@ import os
 # base_path = os.path.split(os.path.split(os.path.realpath(__file__))[0])[0] 二选1
 base_path = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
 
-testdatas_dir = os.path.join(base_path,"TestDatas")
+testdatas_dir = os.path.join(base_path,'TestDatas')
 
-testcases_dir = os.path.join(base_path,"TestCases")
+testcases_dir = os.path.join(base_path,'TestCases')
 
-htmlreport_dir = os.path.join(base_path,"OutPuts/reports")
-screenshots_path = os.path.join(base_path,'OutPuts/screenshots')
-logs_path = os.path.join(base_path,'OutPuts/logs')
+htmlreport_dir = os.path.join(base_path,r'OutPuts\reports')
+screenshots_path = os.path.join(base_path,r'OutPuts\screenshots')
+logs_path = os.path.join(base_path,r'OutPuts\logs')
 
 # config_dir = os.path.join(base_path,'Config')
 
+if __name__ == '__main__':
+    print(htmlreport_dir)

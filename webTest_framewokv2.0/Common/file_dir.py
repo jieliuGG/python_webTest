@@ -16,13 +16,16 @@ TestDatas_path = os.path.join(base_path, 'TestDatas')
 TestCases_path = os.path.join(base_path, 'TestCases')
 
 # 报告路径
-reports_path = os.path.join(base_path, 'Outputs/reports')
-allure_reports_path = os.path.join(base_path,'Outputs/allure_reports')
+reports_path = os.path.join(base_path, r'Outputs\reports')
+allure_reports_path = os.path.join(base_path,r'Outputs\allure_reports')
 
 # 截图路径
-screenshots_path = os.path.join(base_path, 'Outputs/screenshots')
+screenshots_path = os.path.join(base_path, r'Outputs\screenshots')
 
 # 日志路径
-logs_path = os.path.join(base_path, 'Outputs/logs')
+logs_path = os.path.join(base_path, r'Outputs\logs')
 
 # config_dir = os.path.join(base_path,'Config')
+
+if __name__ == '__main__':
+    print(logs_path)

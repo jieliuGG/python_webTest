@@ -1,1 +1,11 @@
-# web自动化测试框架v1.0版本
+```
+-Common
+-Outputs
+-PageLocators
+-PageObjects
+-TestCases
+-TestDatas
+-run.py
+
+```
+
